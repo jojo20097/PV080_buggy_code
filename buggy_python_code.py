@@ -29,7 +29,9 @@ def fetch_website(urllib_version, url):
         print("Exception")
         return
     
-    exec(f"import urllib{urllib_version} as urllib", globals())
+    version = str(int(urllib_version))
+    
+    exec(f"import urllib{version} as urllib", globals())
     # Fetch and print the requested URL
  
     try: 
